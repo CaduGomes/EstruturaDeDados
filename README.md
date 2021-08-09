@@ -23,13 +23,13 @@ Então basta executar o projeto com o CMake
 `make`
 
 ## CMake config
-É necessário criar um arquivo CMkaeLists.txt com essa configuração dentro da pasta root
+É necessário criar um arquivo CMakeLists.txt com essa configuração dentro da pasta root
 
     cmake_minimum_required(VERSION 3.12) # version can be different
 
     set(CMAKE_CXX_STANDARD 17)
 
-    project(ArvoreDeBuscaBinaria) #name of your project
+    project(NOMEDOPROJETO) #name of your project
 
     add_subdirectory(googletest) # add googletest subdirectory
 
