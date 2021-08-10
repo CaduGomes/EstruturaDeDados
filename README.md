@@ -22,6 +22,23 @@ Então basta executar o projeto com o CMake
 
 `make`
 
+## CMake config
+É necessário criar um arquivo CMakeLists.txt com essa configuração dentro da pasta root
+
+    cmake_minimum_required(VERSION 3.12) # version can be different
+
+    set(CMAKE_CXX_STANDARD 17)
+
+    project(NOMEDOPROJETO) #name of your project
+
+    add_subdirectory(googletest) # add googletest subdirectory
+
+    include_directories(googletest/include) # this is so we can #include <gtest/gtest.h>
+
+    add_executable(mytests main.cpp) # add this executable
+
+    target_link_libraries(mytests PRIVATE gtest) # link google test to this executable
+
 ## Debug
 Configuração de debug do VSCode
 
